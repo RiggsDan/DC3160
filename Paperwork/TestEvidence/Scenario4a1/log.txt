@@ -1,0 +1,5 @@
+[CONFIG] The controller has been requested to perform the CHECK_NAME action
+[CONFIG] Checking if username sdasdad was already in use
+[FINER] No client record matching the username sdasdad
+[FINE] Username sdasdad was not found in the database so is free
+[CONFIG] Handling of CHECK_NAME action completed

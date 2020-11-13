@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:f="http://java.sun.com/jsp/jstl/fmt"
+          version="2.0">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+
+    <!-- any content can be specified here, e.g.: -->
+    <jsp:element name="text">
+        <jsp:attribute name="lang">EN</jsp:attribute>
+        <jsp:body>
+            <h1>My Lesson Plan</h1>
+            <p>
+                Greetings, <c:out value="${user}"/>
+            </p>
+            <p>[<a href="viewTimetable">View All Lessons</a> | <a
+					href="viewSelection">View Selected Lessons</a> | <a href="logout">Log Out</a>]</p>
+            <table border="1">
+                <tr>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Level</th>
+                </tr>
+                <c:set scope="page" var="count" value="1"/>
+                <c:forEach var="lesson" items="${selected_lessons.getSelectedLessonsCollection().values()}">
+                    <tr>
+                        <td><c:out value="${lesson.getDescription()}"/></td>
+                        <td><c:out value="${lesson.getDate()}"/></td>
+                        <td><c:out value="${lesson.getStartTime()}"/></td>
+                        <td><c:out value="${lesson.getEndTime()}"/></td>
+                        <td><c:out value="${lesson.getLevel()}"/></td>
+                        <td><form action="cancelLesson">
+			                <input type="hidden" id="lessonID" name="lessonID"
+												value="${lesson.getLessonID()}" />
+												<input type="submit" value="Cancel Lesson" />
+							</form>
+				        </td>
+                    </tr>
+                    <c:set var="count" value="${count+1}"/>
+                </c:forEach>
+            </table>
+        </jsp:body>
+        <form  action="finaliseBooking">
+   			 <input type="submit" value="Finalise My Booking!" />
+		</form>
+    </jsp:element>
+
+</jsp:root>

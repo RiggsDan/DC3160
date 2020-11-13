@@ -1,0 +1,10 @@
+[CONFIG] The controller has been requested to perform the CHECK_NAME action
+[CONFIG] Checking if username NewUser123 was already in use
+[FINER] No client record matching the username NewUser123
+[FINE] Username NewUser123 was not found in the database so is free
+[CONFIG] Handling of CHECK_NAME action completed
+[CONFIG] The controller has been requested to perform the ADD_USER action
+[CONFIG] Handling the creation of user NewUser123 with password NewUserPassword
+[FINER] The client record with username NewUser123 and password NewUserPassword was added
+[CONFIG] User NewUser123 created successfully
+[CONFIG] Handling of ADD_USER action completed

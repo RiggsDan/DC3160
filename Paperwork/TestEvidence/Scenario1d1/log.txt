@@ -1,0 +1,3 @@
+[CONFIG] The controller has been requested to perform the VIEW_SELECTION action
+[FINER] The action type of VIEW_SELECTION does not have an ActionManager
+[CONFIG] Handling of VIEW_SELECTION action completed

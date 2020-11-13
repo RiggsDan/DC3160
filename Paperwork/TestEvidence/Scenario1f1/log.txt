@@ -1,0 +1,4 @@
+[CONFIG] The controller has been requested to perform the LOGOUT action
+[CONFIG] Handling the logout of user snowbunny
+[CONFIG] User snowbunny logged out successfully
+[CONFIG] Handling of LOGOUT action completed

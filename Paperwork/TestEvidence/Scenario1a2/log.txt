@@ -1,0 +1,5 @@
+[CONFIG] The controller has been requested to perform the LOGIN action
+[CONFIG] Handling the login of user snowbunny with password aaaaa
+[FINER] No client record matching the username snowbunny and password aaaaa
+[WARNING] The login attempt by user snowbunny with aaaaa was unsuccessfull
+[CONFIG] Handling of LOGIN action completed

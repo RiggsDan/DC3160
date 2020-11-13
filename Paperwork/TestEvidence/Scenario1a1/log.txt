@@ -1,0 +1,15 @@
+[CONFIG] The controller has been requested to perform the LOGIN action
+[CONFIG] Handling the login of user snowbunny with password snowbunny
+[FINER] Found a client record matching the username snowbunny and password snowbunny
+[FINE] The Client record Client object with details: [clientID=1], [username=snowbunny], [password=snowbunny] was found
+[FINER] Found 2 bookings for the clientid 1
+[FINER] Found lesson with lessonid L6
+[FINER] Found lesson with lessonid L3
+[CONFIG] The user snowbunny successfully logged in
+[CONFIG] The controller has been requested to perform the VIEW_TIMETABLE action
+[CONFIG] The full lessons list has not yet been setup for this session, will fetch now
+[FINE] Creating a new lessons object
+[FINER] Found 9 lessons
+[FINE] Created a new lessons object at time 1605294309428
+[CONFIG] Handling of VIEW_TIMETABLE action completed
+[CONFIG] Handling of LOGIN action completed

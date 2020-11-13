@@ -1,0 +1,5 @@
+[CONFIG] The controller has been requested to perform the LOGIN action
+[CONFIG] Handling the login of user notAUser with password asdasd
+[FINER] No client record matching the username notAUser and password asdasd
+[WARNING] The login attempt by user notAUser with asdasd was unsuccessfull
+[CONFIG] Handling of LOGIN action completed

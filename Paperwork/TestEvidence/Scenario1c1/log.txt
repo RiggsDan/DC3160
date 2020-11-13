@@ -1,0 +1,4 @@
+[CONFIG] The controller has been requested to perform the CHOOSE_LESSON action
+[CONFIG] Adding the lesson with ID L2 to the selection for user
+[FINER] Found lesson with lessonid L2
+[CONFIG] Handling of CHOOSE_LESSON action completed
