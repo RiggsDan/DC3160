@@ -1,12 +1,15 @@
 var request;
 
 function validateUsername(newUsername) {
+	// Clear the warning
+	document.getElementById("addUserWarning").innerHTML = "";
+	
 	if (newUsername.length < 7) {
 		document.getElementById("addUserSubmitButton").disabled = true;
 		document.getElementById("addUserWarning").innerHTML = "The password is too short";
 		return;
 	}
-
+	
 	$.ajax({
 		type: "POST",
 		url: "do/checkName",
@@ -23,6 +26,4 @@ function validateUsername(newUsername) {
 		}
 	});
 	
-	// Clear the warning
-	document.getElementById("addUserWarning").innerHTML = "";
 }

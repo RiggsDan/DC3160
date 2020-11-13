@@ -1,0 +1,3 @@
+[CONFIG] The controller has been requested to perform the FINALISE_BOOKING action
+[FINER] Found a client record matching the username snowbunny 
+[CONFIG] Handling of FINALISE_BOOKING action completed

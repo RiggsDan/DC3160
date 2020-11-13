@@ -2,7 +2,6 @@ package controller;
 
 import java.io.IOException;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -42,7 +41,8 @@ public class Controller extends HttpServlet {
     	SystemLogger.config("The controller has been requested to perform the %s action", controllerAction);
     	
     	// Check if a session is required for the requested action, if one is and doesn't exist the redirect to the home page
-    	if (controllerAction.requiresSession() && request.getSession(false) == null) {
+    	if ((controllerAction.requiresSession() && request.getSession(false) == null)
+    			|| (!controllerAction.requiresSession() && request.getSession(false) != null)) {
     		SystemLogger.warning("The user tried to access an operation requiring a session without having logged in, returning them to the home page");
     		response.sendRedirect(request.getContextPath());
     		return;
@@ -124,12 +124,7 @@ public class Controller extends HttpServlet {
      * @throws IOException
      */
     private void handleForward(HttpServletRequest request, HttpServletResponse response, String destination) throws ServletException, IOException {
-    	ServletContext servletContext = this.getServletContext();
-    	
-    	// This is just for junits as the SevletContext will not be set
-    	if (servletContext != null) {
-    		servletContext.getRequestDispatcher(destination).forward(request, response);
-    	}
+    	this.getServletContext().getRequestDispatcher(destination).forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -147,13 +142,4 @@ public class Controller extends HttpServlet {
 
     	processRequest(request, response);
     }
-    
-    /** 
-     * Returns a short description of the servlet.
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
 }
